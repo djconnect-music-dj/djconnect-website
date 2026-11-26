@@ -16,7 +16,7 @@ jobs:
     name: Software Assurance governance
     permissions:
       contents: read
-    uses: djconnect-music-dj/djconnect-shared-workflows/.github/workflows/software-assurance-governance-aabd.yml@4025a68add8ba98f1f2e0307d7f3998e45c0d9ef
+    uses: djconnect-music-dj/djconnect-shared-workflows/.github/workflows/software-assurance-governance-aabd.yml@6e23f410e573343bea44bba58800ecde2059ebab
     with:
       execution_profile: balanced
       owner: djconnect-music-dj/djconnect-website
@@ -29,8 +29,8 @@ jobs:
       # Same pinned scanner and default query suite as the canonical reusable
       # workflow. Local configuration only fences the immutable source archive.
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
-      - uses: github/codeql-action/init@33d7b85da1a04171e211befe2c739303b9a4c066
+      - uses: github/codeql-action/init@1bd86f2fdb4b86187fa4059f16f31a3202acc9ea
         with:
           languages: javascript-typescript
           config-file: .github/codeql/website.yml
-      - uses: github/codeql-action/analyze@33d7b85da1a04171e211befe2c739303b9a4c066
+      - uses: github/codeql-action/analyze@1bd86f2fdb4b86187fa4059f16f31a3202acc9ea
